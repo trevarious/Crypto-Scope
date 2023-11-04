@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Scope</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  
+</head>
+<body> 
+  <!-- Main Crypto Price Checker Container -->
+  <nav>
+  <div class="logo ">Crypto Scope</div>
+  <div id="clock-container"></div>
+  </nav>
+  <div class="section-container" id="crypto-prices">
+  <div class="container crypto-prices">
+    <h1>Quick Chart</h1>
+    <!-- Input box for entering the cryptocurrency symbol -->
+    <input type="text" id="cryptoInput" placeholder="Enter crypto symbol. ex. bitcoin">
+    <input type="number" id="cryptoDayInput" placeholder="Enter number of days. ex. 5">
+    <!-- Button to initiate the price check -->
+    <button id="checkPriceBtn">Check Price</button>
+    <!-- Container to display the price result -->
+    <div id="priceTrendContainer">
+    <div id="priceResult"></div>  
+    </div>
+    <div id="priceChart" class="chart-container" ></div>
+    <a href="fullScreenChart.html" id="viewChartLink" target="_blank">View(Full Screen Chart)</a>
+    <div id="trendAnalysis"></div>
+  </div>
+</div>
+
+
+
+
+
+  <div class="coin-price-marquee">
+    <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+    <coingecko-coin-price-marquee-widget
+      coin-ids="bitcoin,ethereum,solana,cardano,ripple,stellar,litecoin,matic-network,curve-dao-token,chainlink,trust-wallet-token"
+      currency="usd"
+      background-color="#bcbec6"
+      locale="en"
+      font-color="#001eff">
+    </coingecko-coin-price-marquee-widget>
+  </div>
+
+  <!-- JavaScript file for handling the functionality -->
+  <script src="scripts/clock.js"></script>
+  <script src="scripts/dataFetch.js"></script>
+</body>
+</html>
